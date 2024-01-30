@@ -49,23 +49,21 @@ export default function TwitterFollowCard({
           onClick={handleClick}
           onMouseEnter={handleHover}
           onMouseLeave={handleMouseLeave}
-          className={`bg-slate-100 text-black p-1 items-center rounded-full ml-12 w-[160px] ${
-            montserrat.className
-          } font-medium text-lg
-          ${
-            isHovered
-              ? "hover:bg-red-600 hover:bg-opacity-10 text-red-500 border-red-500"
-              : ""
-          } 
+          className={`bg-slate-100 text-black p-1 items-center rounded-full ml-12 w-[160px]  font-medium text-lg
           ${
             isFollowing
               ? "border-black border text-white bg-transparent"
               : "hover:bg-slate-300"
           } 
+          ${
+            isHovered
+              ? "hover:bg-red-600 hover:bg-opacity-10 border-red-500"
+              : ""
+          } 
           `}
         >
           <span className={`${isHovered ? "hidden" : ""}`}>{text}</span>
-          <span className={`${isHovered ? "" : "hidden"}`}>
+          <span className={`${isHovered ? "text-red-500" : "hidden"}`}>
             Dejar de seguir
           </span>
         </button>
